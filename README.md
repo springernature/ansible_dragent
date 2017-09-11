@@ -7,11 +7,12 @@ Requirements
 ------------
 
 This role requires Ansible 2.0+
+tested on debian based OS, should work on redhat systems aswell
 
 Role Variables
 --------------
 
-None
+api_key: (mandatory) to setup the proper configuration of dragent and talk with your sysdigcloud account 
 
 Dependencies
 ------------
