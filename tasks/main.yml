@@ -1,0 +1,26 @@
+---
+- name: dragent | setup ansible
+  setup:
+  when: ansible_pkg_mgr is undefined
+
+- name: dragent | setup repo
+  include: '{{ ansible_pkg_mgr }}.yml'
+
+- name: dragent | install package
+  package:
+    name: '{{ dragent_package }}'
+    state: latest
+
+- name: dragent | Create Config
+  template:
+    src: templates/dragent.yaml
+    dest: /opt/draios/etc/dragent.yaml
+    owner: root
+    group: root
+    mode: 0644
+  register: result
+
+- service:
+    name: dragent
+    state: restarted
+  when: result|changed

@@ -1,0 +1,14 @@
+---
+- name: dragent | setup yum
+  include_vars: yum.yml
+
+- name: dragent | install package key
+  rpm_key:
+    key: '{{ dragent_rpm_key }}'
+    state: present
+
+- name: dragent | install repo
+  get_url:
+    dest: /etc/yum.repos.d/
+    url: '{{ dragent_repo_url }}'
+

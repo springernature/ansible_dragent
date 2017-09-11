@@ -1,0 +1,4 @@
+---
+dragent_package: draios-agent
+dragent_repo_url: http://download.draios.com/stable/rpm/draios.repo
+dragent_rpm_key: https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public

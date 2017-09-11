@@ -1,0 +1,21 @@
+---
+- name: dragent | setup apt
+  include_vars: apt.yml
+
+- name: dragent | install package key
+  apt_key:
+    url: '{{ dragent_key_url }}'
+    state: present
+  register: result
+
+- name: dragent | install repo
+  get_url:
+    dest: /etc/apt/sources.list.d/
+    url: '{{ dragent_repo_url }}'
+  register: result
+  when: result|changed
+
+- name: dragent | update repo cache
+  apt:
+    update_cache: yes
+  when: result|changed
