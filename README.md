@@ -24,8 +24,11 @@ Example Playbook
 Install dragent
 ```yaml
 - hosts: all
+  vars:
+    api_key: put-your-customer-id-here
   roles:
-  - dragent
+  - ansible_dragent
+
 ```
 
 License
