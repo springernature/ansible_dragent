@@ -13,6 +13,7 @@ Role Variables
 --------------
 
 api_key: (mandatory) to setup the proper configuration of dragent and talk with your sysdigcloud account 
+dragent_tags: (optional), can be used to sysdigcloud's tagging feature to create a custom structure of your environment
 
 Dependencies
 ------------
