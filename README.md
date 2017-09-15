@@ -12,8 +12,8 @@ tested on debian based OS, should work on redhat systems aswell
 Role Variables
 --------------
 
-api_key: (mandatory) to setup the proper configuration of dragent and talk with your sysdigcloud account 
-dragent_tags: (optional), can be used to sysdigcloud's tagging feature to create a custom structure of your environment
+- `api_key`: (mandatory) to setup the proper configuration of dragent and talk with your sysdigcloud account 
+- `dragent_tags`: (optional), can be used to sysdigcloud's tagging feature to create a custom structure of your environment
 
 Dependencies
 ------------
@@ -34,7 +34,7 @@ Install dragent
   		  value: openstack_cluster
   		- name: az
   		  value: rotterdam
-    api_key: put-your-customer-id-here
+    - api_key: put-your-customer-id-here
   roles:
   - ansible_dragent
 
