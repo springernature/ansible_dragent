@@ -1,1 +1,5 @@
 customerid: {{ api_key }}
+tags: {% for item in dragent_tags -%}
+{{ item.name }}:{{ item.value }}
+{%- if not loop.last -%},{%- endif -%}
+{%- endfor -%}

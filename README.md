@@ -26,6 +26,13 @@ Install dragent
 ```yaml
 - hosts: all
   vars:
+  	- dragent_tags:
+  		- name: role
+  		  value: testinstance
+  		- name: location
+  		  value: openstack_cluster
+  		- name: az
+  		  value: rotterdam
     api_key: put-your-customer-id-here
   roles:
   - ansible_dragent
