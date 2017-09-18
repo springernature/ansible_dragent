@@ -34,7 +34,7 @@ Install dragent
   		  value: openstack_cluster
   		- name: az
   		  value: rotterdam
-    - api_key: put-your-customer-id-here
+    - dragent_api_key: put-your-customer-id-here
   roles:
   - ansible_dragent
 
