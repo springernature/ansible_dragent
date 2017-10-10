@@ -1,6 +1,6 @@
 customerid: {{ dragent_api_key }}
 {% if dragent_tags is defined %}
-tags: {% for item in item.value.dragent_tags -%}
+tags: {% for item in dragent_tags -%}
 {{ item.name }}:{{ item.value }}
 {%- if not loop.last -%},{%- endif -%}
 {%- endfor -%}
