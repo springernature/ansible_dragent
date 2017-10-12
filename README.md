@@ -43,7 +43,7 @@ Install dragent
 License
 -------
 
-CC-BY-NC
+CC-BY 2.0
 
 Author Information
 ------------------
